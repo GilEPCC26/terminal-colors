@@ -1,23 +1,22 @@
 #include <stdio.h>
-// TODO: Add the include directive for the custom library header file here
+#include "term_colors.h"   // Include the custom library header file
 
 int main(void) {
-    
-    // TODO: Call the function from the library to clear the screen
-    
-    // TODO: Call the function to print a divider line
 
-    // TODO: Set the text color to GREEN using the library function
+    clear_screen();         // Clears the terminal screen
     
+    print_divider();        // Prints a divider line
+
+    set_color(GREEN);       // Set text color to GREEN
     printf("System Status: ONLINE\n");
 
-    // TODO: Set the text color to RED using the library function
-    
+    set_color(RED);         // Set text color to RED
     printf("Alert: Modular compilation in progress...\n");
 
-    // TODO: Reset the text color back to default
-    
-    // TODO: Print one last divider line
+    reset_color();          // Reset the text color back to default
+
+    print_divider();        // Print one last divider line
 
     return 0;
 }
+
